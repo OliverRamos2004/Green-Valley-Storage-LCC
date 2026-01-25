@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Contact | Green Valley Storage">
+  <section class="section">
+    <div class="container">
+      <h1>Contact</h1>
+      <p class="lead">
+        Tell us what you’re looking for and we’ll follow up with availability and pricing.
+      </p>
+
+      <form
+        class="contact-form"
+        name="contact"
+        method="POST"
+        data-netlify="true"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" required />
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" />
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+
+          <div class="field">
+            <label for="service">What do you need?</label>
+            <select id="service" name="service">
+              <option>Container Sales</option>
+              <option>Delivery / Placement</option>
+              <option>Moving / Relocation</option>
+              <option>General Question</option>
+            </select>
+          </div>
+
+          <div class="field full">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" type="submit">
+          Send Message
+        </button>
+      </form>
+
+      <div class="contact-alt">
+        <p>
+          Prefer to talk directly?  
+          <a href="tel:+1XXXXXXXXXX">Call us</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

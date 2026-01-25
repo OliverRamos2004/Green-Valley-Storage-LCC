@@ -1,0 +1,24 @@
+---
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/work", label: "Work / Photos" },
+  { href: "/contact", label: "Contact" },
+];
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/">
+      <span class="brand-name">Green Valley Storage</span>
+      <span class="brand-sub">Shipping Containers</span>
+    </a>
+
+    <nav class="nav">
+      {navLinks.map((link) => (
+        <a class="nav-link" href={link.href}>{link.label}</a>
+      ))}
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const photos = [
+  { title: "Container delivery", tag: "Delivery" },
+  { title: "Site placement", tag: "Placement" },
+  { title: "Container relocation", tag: "Moving" },
+  { title: "Inventory (new / used)", tag: "Sales" },
+  { title: "Customer pickup", tag: "Sales" },
+  { title: "Work in progress", tag: "Logistics" },
+];
+---
+
+<BaseLayout title="Work / Photos | Green Valley Storage">
+  <section class="section">
+    <div class="container">
+      <h1>Work / Photos</h1>
+      <p class="lead">
+        Examples of container sales, delivery, placement, and relocation work. (More photos coming soon.)
+      </p>
+
+      <div class="gallery">
+        {photos.map((p) => (
+          <figure class="photo-card">
+            <div class="photo" aria-hidden="true"></div>
+            <figcaption class="photo-meta">
+              <span class="photo-title">{p.title}</span>
+              <span class="badge">{p.tag}</span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+
+      <div class="cta">
+        <div>
+          <h2 class="cta-title">Want to see availability?</h2>
+          <p class="cta-text">Tell us what size you need and your delivery location.</p>
+        </div>
+        <a class="btn btn-primary" href="/contact">Request a Quote</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,17 +1,58 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Green Valley Storage | Shipping Containers">
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <p class="eyebrow">Green Valley Storage LLC</p>
+        <h1>Shipping container sales & moving—simple, fast, reliable.</h1>
+        <p class="hero-text">
+          We help customers buy and move shipping containers with clear communication and professional service.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/contact">Request a Quote</a>
+          <a class="btn btn-ghost" href="tel:+1XXXXXXXXXX">Call Now</a>
+        </div>
+
+        <div class="hero-points">
+          <div class="point">
+            <span class="point-title">Sales</span>
+            <span class="point-desc">New and used containers</span>
+          </div>
+          <div class="point">
+            <span class="point-title">Moving</span>
+            <span class="point-desc">Delivery and relocation</span>
+          </div>
+          <div class="point">
+            <span class="point-title">Professional</span>
+            <span class="point-desc">Clear quotes & scheduling</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-image" aria-hidden="true"></div>
+        <div class="hero-card-body">
+          <p class="hero-card-title">Need a container delivered?</p>
+          <p class="hero-card-text">
+            Send details and we’ll follow up with availability and pricing.
+          </p>
+          <a class="btn btn-small btn-primary" href="/contact">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>What we do</h2>
+      <p>
+        Green Valley Storage provides shipping container sales and moving. This site makes it easy to see services,
+        view photos of work, and contact us directly.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
