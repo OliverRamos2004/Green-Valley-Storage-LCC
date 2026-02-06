@@ -10,10 +10,17 @@ const navLinks = [
 
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="/">
-      <span class="brand-name">Green Valley Storage</span>
-      <span class="brand-sub">Shipping Containers</span>
-    </a>
+    <a href="/" class="brand">
+  <img
+    src="/images/greenvalley-logo.png"
+    alt="Green Valley Storage logo"
+    class="brand-logo"
+  />
+  <div class="brand-text">
+    <span class="brand-name">Green Valley Storage</span>
+    <span class="brand-sub">Shipping Containers</span>
+  </div>
+</a>
 
     <nav class="nav">
       {navLinks.map((link) => (

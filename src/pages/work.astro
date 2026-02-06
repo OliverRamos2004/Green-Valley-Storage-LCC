@@ -2,12 +2,12 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const photos = [
-  { title: "Container delivery", tag: "Delivery" },
-  { title: "Site placement", tag: "Placement" },
-  { title: "Container relocation", tag: "Moving" },
-  { title: "Inventory (new / used)", tag: "Sales" },
-  { title: "Customer pickup", tag: "Sales" },
-  { title: "Work in progress", tag: "Logistics" },
+  { src: "/images/work1.jpg", title: "Delivery of a shipping container", alt: "Delivery of a shipping container", tag: "Delivery" },
+  { src: "/images/work2.jpg", title: "Placement of a shipping container", alt: "Placement of a shipping container", tag: "Placement" },
+  { src: "/images/work3.jpg", title: "Moving a shipping container", alt: "Moving a shipping container", tag: "Moving" },
+  { src: "/images/work4.jpg", title: "Sales of a shipping container", alt: "Sales of a shipping container", tag: "Sales" },
+  { src: "/images/work5.jpg", title: "Sales of a shipping container", alt: "Sales of a shipping container", tag: "Sales" },
+  { src: "/images/work6.jpg", title: "Logistics of shipping containers", alt: "Logistics of shipping containers", tag: "Logistics" },
 ];
 ---
 
@@ -22,12 +22,13 @@ const photos = [
       <div class="gallery">
         {photos.map((p) => (
           <figure class="photo-card">
-            <div class="photo" aria-hidden="true"></div>
+            <a href={p.src} rel="noopener noreferrer" class="photo-link"><img src={p.src} alt={p.alt} loading="lazy" class="photo-img"/>
             <figcaption class="photo-meta">
               <span class="photo-title">{p.title}</span>
               <span class="badge">{p.tag}</span>
             </figcaption>
-          </figure>
+          </figure></a>
+            
         ))}
       </div>
 
