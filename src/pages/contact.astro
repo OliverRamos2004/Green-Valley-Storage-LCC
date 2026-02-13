@@ -17,18 +17,25 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         name="contact"
         method="POST"
         data-netlify="true"
+        netlify-honeypot="bot-field"
+        action="/thanks"
       >
         <input type="hidden" name="form-name" value="contact" />
+
+        <p class="hidden">
+          <label>
+            Don’t fill this out if you’re human: <input name="bot-field" />
+          </label>
 
         <div class="form-grid">
           <div class="field">
             <label for="name">Name</label>
-            <input id="name" name="name" required />
+            <input id="name" name="name" type="text" required />
           </div>
 
           <div class="field">
             <label for="phone">Phone</label>
-            <input id="phone" name="phone" />
+            <input id="phone" name="phone" type="tel" />
           </div>
 
           <div class="field">

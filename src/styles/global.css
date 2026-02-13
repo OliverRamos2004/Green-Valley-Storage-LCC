@@ -565,3 +565,7 @@ textarea:focus {
     gap: 1.5rem;
   }
 }
+
+.hidden {
+  display: none;
+}
