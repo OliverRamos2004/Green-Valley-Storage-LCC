@@ -24,10 +24,23 @@ const navLinks = [
   </div>
 </a>
 
-    <nav class="nav">
-      {navLinks.map((link) => (
-        <a class="nav-link" href={link.href}>{link.label}</a>
-      ))}
-    </nav>
+    <nav class="nav-desktop">
+  {navLinks.map((link) => (
+    <a class="nav-link" href={link.href}>{link.label}</a>
+  ))}
+</nav>
+
+<details class="nav-mobile">
+  <summary class="menu-button" aria-label="Open menu">
+    ☰ Menu
+  </summary>
+
+  <div class="menu-panel">
+    {navLinks.map((link) => (
+      <a class="menu-link" href={link.href}>{link.label}</a>
+    ))}
+  </div>
+</details>
+
   </div>
 </header>
